@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "React chat panel",
   "main": "lib/index.js",
-  "private": true,
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o lib/",
     "build-js": "babel ./src -d ./lib",
