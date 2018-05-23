@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
-import Message from '../message/Message';
-import MessageInput from '../message-input/MessageInput';
+import Message from '../../components/message/Message';
+import MessageInput from '../../components/message-input/MessageInput';
 
 import './chat-panel.css';
 
