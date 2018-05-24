@@ -35,6 +35,7 @@ class ChatPanel extends Component {
       <div id="chatPanel">
         <div className="top_menu">
           <div className="title">Chat</div>
+          {this.props.actions}
         </div>
         <ul className="messages" ref="messages">
           {this.props.messages.map((message, i) => (
