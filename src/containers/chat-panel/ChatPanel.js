@@ -34,7 +34,7 @@ class ChatPanel extends Component {
     return (
       <div id="chatPanel">
         <div className="top_menu">
-          <div className="title">Chat</div>
+          <div className="title">{this.props.title || 'Chat'}</div>
           {this.props.actions}
         </div>
         <ul className="messages" ref="messages">
