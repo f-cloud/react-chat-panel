@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { isUrl } from '../../utils/helpers';
+import { parseUrlInText } from '../../utils/helpers';
 
 import './message.css';
 
@@ -15,13 +15,7 @@ const Message = ({ text, position, timestamp }) => {
       <div className="avatar"></div>
       <div className="text_wrapper">
         <span className="timestamp">{timestamp}</span>
-        <div className="text">
-          {isUrl(text) ?
-            <a href={/^https?/.test(text) ? text : `//${text}`} target="_blank">{text}</a>
-            :
-            text
-          }
-        </div>
+        <div className="text" dangerouslySetInnerHTML={{__html: parseUrlInText(text)}} />
       </div>
     </li>
   );
