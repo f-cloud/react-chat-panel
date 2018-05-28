@@ -22,6 +22,7 @@ const MessageInput = ({ typedMessage, onChange, onSend, disabled }) => {
         onClick={onSend}
         disabled={disabled}
       >Send</button>
+      <div className="typing">Typing...</div>
     </div>
   );
 };

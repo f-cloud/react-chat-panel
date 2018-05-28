@@ -19,7 +19,10 @@ class ChatPanel extends Component {
     this.scrollToBottom()
   }
 
-  onChange = e => this.setState({ typedMessage: e.target.value })
+  onChange = e => {
+    this.setState({ typedMessage: e.target.value });
+    this.props.onTyping(e);
+  }
 
   scrollToBottom() {
     this.refs.messages.scrollTop = this.refs.messages.scrollHeight;
