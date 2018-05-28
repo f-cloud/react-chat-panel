@@ -52,10 +52,9 @@
   #message .text_wrapper {
     display: inline-block;
     padding: 20px;
-    padding-right: 100px;
     width: auto;
     border-radius: 6px;
-    min-width: 100px;
+    min-width: 120px;
     max-width: calc(100% - 85px);
     position: relative; }
     #message .text_wrapper::after {
