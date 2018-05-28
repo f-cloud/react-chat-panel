@@ -52,6 +52,7 @@ class ChatPanel extends Component {
           disabled={this.props.disableChat}
           onSend={this.sendMessage}
           onChange={this.onChange}
+          isTyping={this.props.isTyping}
           typedMessage={this.state.typedMessage}
         />
       </div>

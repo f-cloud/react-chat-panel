@@ -2,7 +2,7 @@ import React from 'react';
 
 import './message-input.css';
 
-const MessageInput = ({ typedMessage, onChange, onSend, disabled }) => {
+const MessageInput = ({ typedMessage, onChange, onSend, disabled, isTyping }) => {
   return (
     <div className="clearfix" id="bottomWrapper">
       <div className={`message_input_wrapper ${disabled ? 'disabled' : ''}`}>
@@ -22,7 +22,9 @@ const MessageInput = ({ typedMessage, onChange, onSend, disabled }) => {
         onClick={onSend}
         disabled={disabled}
       >Send</button>
-      <div className="typing">Typing...</div>
+      {isTyping &&
+        <div className="typing">Typing...</div>
+      }
     </div>
   );
 };
