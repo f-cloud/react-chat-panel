@@ -1,0 +1,36 @@
+#chatPanel {
+  position: absolute;
+  width: calc(100% - 20px);
+  max-width: 800px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f8f8f8;
+  overflow: hidden;
+
+  .top_menu {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 0 15px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    .title {
+      text-align: center;
+      color: #bcbdc0;
+      font-size: 20px;
+    }
+  }
+
+  .messages {
+    position: relative;
+    list-style: none;
+    padding: 20px 10px 0 10px;
+    margin: 0;
+    height: calc(100% - 65px - 82px);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
