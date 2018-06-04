@@ -54,7 +54,7 @@
     padding: 20px;
     width: auto;
     border-radius: 6px;
-    min-width: 120px;
+    min-width: 150px;
     max-width: calc(100% - 85px);
     position: relative; }
     #message .text_wrapper::after {
