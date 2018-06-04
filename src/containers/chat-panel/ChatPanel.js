@@ -43,10 +43,8 @@ class ChatPanel extends Component {
         <ul className="messages" ref="messages">
           {this.props.messages.map((message, i) => (
             <Message key={i}
+              {...message}
               timestamp={moment(message.timestamp).fromNow()}
-              typed={message.typed}
-              text={message.text}
-              position={message.position}
             />
           ))}
         </ul>
