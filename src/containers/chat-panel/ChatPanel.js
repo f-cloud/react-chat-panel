@@ -61,7 +61,7 @@ class ChatPanel extends Component {
           ))}
         </ul>
         <MessageInput
-          {...this.props}
+          {...this.props.styles}
           disabled={this.props.disableChat}
           onSend={this.sendMessage}
           onChange={this.onChange}
