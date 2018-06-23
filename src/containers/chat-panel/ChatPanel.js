@@ -34,23 +34,34 @@ class ChatPanel extends Component {
   }
 
   render() {
+    const { styles: { themeColor, titleTextColor }} = this.props;
+
     return (
       <div id="chatPanel">
-        <div className="top_menu">
-          <div className="title">{this.props.title || 'Chat'}</div>
+        <div
+          className="top_menu"
+          style={{
+            backgroundColor: themeColor
+          }}>
+          <div
+            className="title"
+            style={{
+              color: titleTextColor
+            }}>
+            {this.props.title || 'Chat'}
+          </div>
           {this.props.actions}
         </div>
         <ul className="messages" ref="messages">
           {this.props.messages.map((message, i) => (
             <Message key={i}
+              {...message}
               timestamp={moment(message.timestamp).fromNow()}
-              typed={message.typed}
-              text={message.text}
-              position={message.position}
             />
           ))}
         </ul>
         <MessageInput
+          {...this.props.styles}
           disabled={this.props.disableChat}
           onSend={this.sendMessage}
           onChange={this.onChange}

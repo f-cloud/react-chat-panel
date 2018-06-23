@@ -2,9 +2,16 @@ import React from 'react';
 
 import './message-input.css';
 
-const MessageInput = ({ typedMessage, onChange, onSend, disabled, isTyping }) => {
+const MessageInput = (props) => {
+  const { typedMessage, onChange, onSend, disabled, isTyping } = props;
+
   return (
-    <div className="clearfix" id="bottomWrapper">
+    <div
+      className="clearfix"
+      id="bottomWrapper"
+      style={{
+        backgroundColor: props.themeColor
+      }}>
       <div className={`message_input_wrapper ${disabled ? 'disabled' : ''}`}>
         <input
           value={typedMessage}
